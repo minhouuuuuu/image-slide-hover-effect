@@ -35,12 +35,10 @@ export default function Home() {
     <main className={styles.main}>
       <div className={styles.gallery}>
         <p>Featured Work</p>
-          {
-            projects.map( project => {
-              return <Project project={project}/>
-            })
-          }
+        {projects.map((project, index) => (
+          <Project key={index} project={project} />
+        ))}
       </div>
     </main>
-  )
+  );
 }
